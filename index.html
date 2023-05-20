@@ -1,0 +1,25 @@
+<html>
+<head><title>Door Animation</title></head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<div class="overallWrapper">
+<div class="wrapper">
+<img src="https://i.ibb.co/bv2SP6b/Image-1.jpg">
+<h1>Good to see you</h1>
+	<div class="door"></div>
+
+</div>
+</div>
+
+
+<script>const wrapper = document.querySelector('.wrapper');
+const door = document.querySelector('.door');
+
+door.addEventListener('click', () => {
+  wrapper.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
