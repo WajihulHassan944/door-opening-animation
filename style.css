@@ -20,7 +20,7 @@ body {
   width: 400px;
   height: 600px;
   transform-style: preserve-3d; /* Added line */
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  box-shadow:-10px 10px 40px rgba(0,0,0,0.25);
 }
 .wrapper h1{
 	position:absolute;
@@ -29,6 +29,8 @@ body {
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);
+	width:170px;
+	text-align:center;
 }
 .wrapper img {
   width: 100%;
@@ -41,7 +43,7 @@ body {
   position: absolute;
   left: 97px;
   top: 57px;
-  transition: 1s;
+  transition: 3s;
   transform-origin: right center; /* Adjusted line */
   transform-style: preserve-3d;
   background-image: url("images/wall3.png");
