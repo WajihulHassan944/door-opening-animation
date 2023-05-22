@@ -1,32 +1,40 @@
+<!DOCTYPE html>
 <html>
-<head><title>Door Animation</title></head>
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<head>
+    <title>Door Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
+    <div class="overallWrapper">
+        <div class="wrapper">
+          <!--  <img src="https://i.ibb.co/bv2SP6b/Image-1.jpg" alt="Door Image"> -->
+            <div class="door left"></div>
+            <div class="door right"></div>
+            <h1 id="message">
+                <i class="fa fa-quote-left" aria-hidden="true"></i><br><br>
+                9. SPHOT will be our last project before the museum opens.
+				We will try to merge photographers with… psst better not to tell here, someone might steal the idea! You will learn in due time!
+            </h1>
+        </div>
+    </div>
 
-<div class="overallWrapper">
-<div class="wrapper">
-<img src="https://i.ibb.co/bv2SP6b/Image-1.jpg">
-<h1>
-<i class="fa fa-quote-left" aria-hidden="true"></i><br><br>
-					9. <strong>SPHOT</strong> will be our last project before the museum opens.
-				We will try to merge photographers with… psst better not to tell here, someone might steal the idea ! You will learn in due time !
-                </h1>
-	<div class="door"></div>
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const doors = document.querySelectorAll('.door');
+        const message = document.getElementById('message');
 
-</div>
-</div>
+        doors.forEach(door => {
+            door.addEventListener('click', () => {
+                wrapper.classList.add('open');
+                message.classList.add('open');
+            });
+        });
 
-
-<script>const wrapper = document.querySelector('.wrapper');
-const door = document.querySelector('.door');
-
-door.addEventListener('click', () => {
-  wrapper.classList.toggle('open');
-});
-</script>
-
+        message.addEventListener('click', () => {
+            wrapper.classList.remove('open');
+            message.classList.remove('open');
+        });
+    </script>
 </body>
 </html>
